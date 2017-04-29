@@ -25,11 +25,12 @@ def detection(img):
 
 if __name__=="__main__":
 
-  img1 = cv2.imread('/image/color_match/clustering/mask/cluster5/test/' + spine1[1] + '_mask.jpg')
-  #img1 = cv2.imread('/image/samples/shelf1/IMG_50_0.jpg')
+  #img1 = cv2.imread('/image/color_match/clustering/mask/cluster5/test/' + spine1[1] + '_mask.jpg')
+  img1 = cv2.imread('/image/samples/mask_cut.jpg', -1)
+  #img1 = cv2.imread('/image/IMG_50_0.jpg')
   src1 = detection(img1)
-  cv2.imwrite("/image/detected_" + spine1[1] + ".jpg", src1[0])
-  #cv2.imwrite("/image/detected_IMG_50_0.jpg", src1[0])
+  #cv2.imwrite("/image/detected_spine_" + spine1[1] + ".jpg", src1[0])
+  cv2.imwrite("/image/samples/detected_mask_cut.jpg", src1[0])
   
 
   """
@@ -51,14 +52,14 @@ if __name__=="__main__":
   cv2.imwrite("/image/detected_" + spine1[4] + ".jpg", src5[0])
   """
 
-  f1 = open('/image/detected_master.txt','w')
-  f1.write(str(src1[1]) + "\n")
+  #f1 = open('/image/detected_spine_visual.txt','w')
+  #f1.write(str(src1[1]) + "\n")
   """
   f1.write(src2[1] + "\n")
   f1.write(src3[1] + "\n")
   f1.write(src4[1] + "\n")
   f1.write(src5[1] + "\n")
   """
-  f1.close()
+  #f1.close()
 
   cv2.waitKey(0)
