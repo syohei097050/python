@@ -26,12 +26,13 @@ def write(features, syukusyo, detector):
 
 def detection(shelf, spine):
 
-	img = cv2.imread('/image/samples/' + shelf + '/' + spine + '.jpg') 
+	#img = cv2.imread('/image/samples/' + shelf + '/' + spine + '.jpg') 
+  img = cv2.imread('/Users/syohei/Google ドライブ/大澤・梅澤研究室/大学院/image/spine1/opencv.jpg')
 
 	#AKAZE = cv2.AKAZE_create()
 	#BRISK = cv2.BRISK_create()
 	#ORB = cv2.ORB_create()
-	SIFT = cv2.xfeatures2d.SIFT_create()
+  SIFT = cv2.xfeatures2d.SIFT_create()
 	#SURF = cv2.xfeatures2d.SURF_create()
 
 	#key_AKAZE = AKAZE.detect(img)
